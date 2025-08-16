@@ -1,0 +1,28 @@
+---
+import Menu from './Menu.astro';
+---
+
+<header>
+  <a href="/"><img src="/KLINECRAFT.png" alt="Klinecraft" /></a>
+  <Menu />
+</header>
+
+<style>
+  header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  img {
+    height: 60px;
+    width: auto;
+  }
+  
+  a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+</style>
