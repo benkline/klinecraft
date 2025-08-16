@@ -1,0 +1,85 @@
+---
+
+---
+
+<div class="menu-container">
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="menu" id="menu">
+    <a href="/">Home</a>
+    <a href="/evelyn">Evelyn</a>
+    <a href="/charlotte">Charlotte</a>
+    <a href="/dad-blog">Dad Blog</a>
+    <a href="/the-crystal-way">The Crystal Way</a>
+    <a href="/food">Food!</a>
+  </nav>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  
+  hamburger?.addEventListener('click', () => {
+    menu?.classList.toggle('open');
+  });
+</script>
+
+<style>
+  .menu-container {
+    position: relative;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+    margin-top: 0.5rem;
+  }
+  
+  .menu.open {
+    display: flex;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s;
+  }
+  
+  .menu a:hover {
+    background: #f0f0f0;
+  }
+</style>
